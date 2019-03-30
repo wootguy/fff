@@ -5,8 +5,8 @@
 
 $cpp_output = true
 $MAX_ARGS = 16
-$DEFAULT_ARG_HISTORY = 50
-$MAX_CALL_HISTORY = 50
+$DEFAULT_ARG_HISTORY = 1
+$MAX_CALL_HISTORY = 1
 
 def include_dependencies
   putd "#include <stdarg.h>"

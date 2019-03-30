@@ -31,10 +31,10 @@ SOFTWARE.
 
 #define FFF_MAX_ARGS (16u)
 #ifndef FFF_ARG_HISTORY_LEN
-    #define FFF_ARG_HISTORY_LEN (50u)
+    #define FFF_ARG_HISTORY_LEN (1u)
 #endif
 #ifndef FFF_CALL_HISTORY_LEN
-    #define FFF_CALL_HISTORY_LEN (50u)
+    #define FFF_CALL_HISTORY_LEN (1u)
 #endif
 #ifndef FFF_GCC_FUNCTION_ATTRIBUTES
     #define FFF_GCC_FUNCTION_ATTRIBUTES
