@@ -104,9 +104,9 @@ def define_declare_all_func_common_helper
   puts
   putd_backslash "#define DECLARE_ALL_FUNC_COMMON"
   indent {
-    putd_backslash "unsigned int call_count;"
-    putd_backslash "unsigned int arg_history_len;"
-    putd_backslash "unsigned int arg_histories_dropped;"
+    putd_backslash "unsigned char call_count;"
+    putd_backslash "unsigned char arg_history_len;"
+    putd_backslash "unsigned char arg_histories_dropped;"
   }
 end
 
@@ -166,8 +166,8 @@ def define_value_function_variables_helper
   putd_backslash "#define DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)"
   indent {
     putd_backslash "RETURN_TYPE return_val;"
-    putd_backslash "int return_val_seq_len;"
-    putd_backslash "int return_val_seq_idx;"
+    putd_backslash "char return_val_seq_len;"
+    putd_backslash "char return_val_seq_idx;"
     putd_backslash "RETURN_TYPE * return_val_seq;"
   }
 end
@@ -176,8 +176,8 @@ def define_custom_fake_seq_variables_helper
   puts
   putd_backslash "#define DECLARE_CUSTOM_FAKE_SEQ_VARIABLES"
   indent {
-    putd_backslash "int custom_fake_seq_len;"
-    putd_backslash "int custom_fake_seq_idx;"
+    putd_backslash "char custom_fake_seq_len;"
+    putd_backslash "char custom_fake_seq_idx;"
   }
 end
 
@@ -490,7 +490,7 @@ def define_fff_globals
   putd "typedef struct { "
   indent {
     putd "fff_function_t call_history[FFF_CALL_HISTORY_LEN];"
-    putd "unsigned int call_history_idx;"
+    putd "unsigned char call_history_idx;"
   }
   putd "} fff_globals_t;"
   puts

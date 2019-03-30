@@ -58,9 +58,9 @@ SOFTWARE.
     type arg##n##_history[FFF_ARG_HISTORY_LEN];
 
 #define DECLARE_ALL_FUNC_COMMON \
-    unsigned int call_count; \
-    unsigned int arg_history_len; \
-    unsigned int arg_histories_dropped; \
+    unsigned char call_count; \
+    unsigned char arg_history_len; \
+    unsigned char arg_histories_dropped; \
 
 #define DECLARE_RETURN_VALUE_HISTORY(RETURN_TYPE) \
     RETURN_TYPE return_val_history[FFF_ARG_HISTORY_LEN];
@@ -83,13 +83,13 @@ SOFTWARE.
 
 #define DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE) \
     RETURN_TYPE return_val; \
-    int return_val_seq_len; \
-    int return_val_seq_idx; \
+    char return_val_seq_len; \
+    char return_val_seq_idx; \
     RETURN_TYPE * return_val_seq; \
 
 #define DECLARE_CUSTOM_FAKE_SEQ_VARIABLES \
-    int custom_fake_seq_len; \
-    int custom_fake_seq_idx; \
+    char custom_fake_seq_len; \
+    char custom_fake_seq_idx; \
 
 #define INCREMENT_CALL_COUNT(FUNCNAME) \
     FUNCNAME##_mock.call_count++
@@ -124,7 +124,7 @@ SOFTWARE.
 typedef void (*fff_function_t)(void);
 typedef struct { 
     fff_function_t call_history[FFF_CALL_HISTORY_LEN];
-    unsigned int call_history_idx;
+    unsigned char call_history_idx;
 } fff_globals_t;
 
 FFF_EXTERN_C
