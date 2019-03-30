@@ -4,7 +4,7 @@
 
 
 $cpp_output = true
-$MAX_ARGS = 20
+$MAX_ARGS = 16
 $DEFAULT_ARG_HISTORY = 50
 $MAX_CALL_HISTORY = 50
 
